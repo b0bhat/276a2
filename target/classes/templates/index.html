@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Database</title>
+    <link type="text/css" rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+    <div class="box">
+        <h1>Rectangle Database</h1>
+        <table>
+        	<tr>
+    			<th>ID</th>
+    			<th>Name</th> 
+    			<th>Color</th>
+    			<th> </th> 
+    			<th> </th>
+  			</tr>
+        	<tr th:each="records : ${records}">
+            <td th:text="${records.getID()}"></td>
+            <td th:text="${records.getName()}"></td>
+            <td th:text="${records.getColor()}"></td>
+            <td>
+                <a th:href="@{/read?rid={id}(id = ${records.getID()})}">Read</a> 
+                <a th:href="@{/delete?rid={id}(id = ${records.getID()})}">Remove</a>
+            </td>
+        	</tr>
+    	</table>
+    	<a class="button" th:href="@{/create}">Add New Rectangle</a>
+    </div>
+</body>
+</html>

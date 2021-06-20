@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Rectangle</title>
+    <link type="text/css" rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+	<div class="box">
+		<div th:style="'background:' + ${record.getColor()} + '; width:' + ${record.getWidth()} + 'px; height:' + ${record.getHeight()} + 'px;border:1px solid #000;'">
+	    <!-- <p style="white-space: nowrap;" th:text="${record.getID()}"></p>-->
+	    </div>
+		<h1> <p th:text="${record.getName()}"></p> </h1>
+	    <table>
+	    	<tr>
+	    		<th>ID: </th>
+	        	<td th:text="${record.getID()}"></td>
+	        </tr>
+	        <tr>
+	        	<th>Name: </th>
+	        	<td th:text="${record.getName()}"></td>
+	        </tr>
+	        <tr>
+	        	<th>Width: </th>
+	        	<td th:text="${record.getWidth()}"></td>
+	        </tr>
+	        <tr>
+	        	<th>Height: </th>
+	        	<td th:text="${record.getHeight()}"></td>
+	        </tr>
+	        <tr>
+	        	<th>Color: </th>
+	        	<td th:text="${record.getColor()}"></td>
+	        </tr>
+	    </table>
+    	<a class="button" th:href = "@{/}">Back</a>
+    </div>
+</body>
+</html>

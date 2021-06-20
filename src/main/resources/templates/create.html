@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Rectangle</title>
+    <link type="text/css" rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+	<div class = "box">
+	    <form action="#" method="post" th:action="@{/create}" th:object="${create}">
+	        <input type="text" th:field=*{name} placeholder="Name"> <br>
+	        <input type="text" th:field=*{width} placeholder="Width"> <br>
+	        <input type="text" th:field=*{height} placeholder="Height"> <br>
+	        <input type="text" th:field=*{color} placeholder="Color (can be text, rgb, or hex)"> <br>
+	        <input type="submit" value="Submit Rectangle">
+	    </form>
+	    <div class="divider"></div>
+	    <a class="button" th:href = "@{/}">Back</a>
+    </div>
+</body>
+</html>
