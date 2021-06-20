@@ -1,4 +1,4 @@
-# Important FIles
+# Important Files
 
 in src/main/resources/templates/
 - create.html (creation of new rectangles)
